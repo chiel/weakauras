@@ -26,6 +26,16 @@ function Trigger(allstates, event, ...)
 	for _, key in ipairs(pluginOrder) do
 		local plugin = aura_env.cache[key]
 		for _, section in ipairs(plugin.sections) do
+			if aura_env.config.empty_line_between_sections and i > 1 then
+				allstates['spacing' .. i] = {
+					changed = true,
+					show = true,
+					name = '',
+					index = i,
+				}
+				i = i + 1
+			end
+
 			allstates['heading_' .. key .. '_' .. section.name] = {
 				changed = true,
 				show = true,
