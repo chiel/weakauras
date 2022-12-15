@@ -26,43 +26,57 @@ function Trigger(allstates, event, ...)
 	for _, key in ipairs(pluginOrder) do
 		local plugin = aura_env.cache[key]
 		for _, section in ipairs(plugin.sections) do
+			local showSection = false
+			local addStates = {}
+
 			if aura_env.config.empty_line_between_sections and i > 1 then
-				allstates['spacing' .. i] = {
-					changed = true,
-					show = true,
-					name = '',
-					index = i,
-				}
-				i = i + 1
+				table.insert(addStates, {
+					key = 'spacing' .. i,
+					value = {
+						changed = true,
+						show = true,
+						name = '',
+					},
+				})
 			end
 
-			allstates['heading_' .. key .. '_' .. section.name] = {
-				changed = true,
-				show = true,
-				name = WrapTextInColorCode(section.name, aura_env.colors.heading),
-				index = i,
-			}
-			i = i + 1
-
-			for _, entry in ipairs(section.entries) do
-				local name = entry.name
-				local line = WrapTextInColorCode(name, aura_env.colors.pending)
-
-				if entry.completed then
-					line = WrapTextInColorCode(name, aura_env.colors.completed)
-				end
-
-				if not entry.available then
-					line = WrapTextInColorCode(name, aura_env.colors.unavailable)
-				end
-
-				allstates['entry_' .. key .. '_' .. section.name .. '_' .. entry.name] = {
+			table.insert(addStates, {
+				key = 'heading_' .. key .. '_' .. section.name,
+				value = {
 					changed = true,
 					show = true,
-					name = line,
-					index = i,
-				}
-				i = i + 1
+					name = WrapTextInColorCode(section.name, aura_env.colors.heading),
+				},
+			})
+
+			for _, entry in ipairs(section.entries) do
+				local state = entry.state or 'PENDING'
+				local showEntry = (
+					state == 'PENDING'
+					or (state == 'COMPLETED' and aura_env.config.show_completed)
+					or (state == 'UNAVAILABLE' and aura_env.config.show_unavailable)
+				)
+
+				if showEntry then
+					local line = WrapTextInColorCode(entry.name, aura_env.stateColors[state])
+
+					showSection = true
+					table.insert(addStates, {
+						key = 'entry_' .. key .. '_' .. section.name .. '_' .. entry.name,
+						value = {
+							changed = true,
+							show = true,
+							name = line,
+						},
+					})
+				end
+			end
+
+			if showSection then
+				for _, state in ipairs(addStates) do
+					allstates[state.key] = Mixin({}, state.value, { index = i })
+					i = i + 1
+				end
 			end
 		end
 	end

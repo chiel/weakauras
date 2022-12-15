@@ -9,3 +9,9 @@ aura_env.colors = {
 }
 
 aura_env.priorityOrder = { 'HIGH', 'MEDIUM', 'LOW' }
+
+aura_env.stateColors = {
+	COMPLETED = aura_env.colors.completed,
+	PENDING = aura_env.colors.pending,
+	UNAVAILABLE = aura_env.colors.unavailable,
+}
