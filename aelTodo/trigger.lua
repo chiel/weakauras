@@ -24,18 +24,27 @@ function Trigger(allstates)
 			allstates['heading_' .. key .. '_' .. section.name] = {
 				changed = true,
 				show = true,
-				name = section.name,
+				name = WrapTextInColorCode(section.name, aura_env.colors.heading),
 				index = i,
 			}
 			i = i + 1
 
 			for _, entry in ipairs(section.entries) do
 				local name = entry.name
+				local line = WrapTextInColorCode(name, aura_env.colors.pending)
+
+				if entry.completed then
+					line = WrapTextInColorCode(name, aura_env.colors.completed)
+				end
+
+				if not entry.available then
+					line = WrapTextInColorCode(name, aura_env.colors.unavailable)
+				end
 
 				allstates['entry_' .. key .. '_' .. section.name .. '_' .. entry.name] = {
 					changed = true,
 					show = true,
-					name = entry.name,
+					name = line,
 					index = i,
 				}
 				i = i + 1
