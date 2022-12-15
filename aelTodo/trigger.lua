@@ -1,4 +1,9 @@
-function Trigger(allstates)
+function Trigger(allstates, event, ...)
+	if event == 'AEL_TODO_UPDATE' then
+		local key, plugin = ...
+		aura_env.cache[key] = plugin
+	end
+
 	local pluginsByPriority = {}
 	for key, plugin in pairs(aura_env.cache) do
 		local priority = plugin.priority or 'LOW'
