@@ -43,23 +43,7 @@ function Trigger(event, ...)
 	for _, profName in ipairs(profNames) do
 		local prof = profMap[profName]
 		local rawEntries = aura_env.entriesByProfession[prof.skillLine]
-
-		local entries = {}
-		for _, entry in ipairs(rawEntries) do
-			local state = entry.isAvailable ~= nil and 'UNAVAILABLE' or 'PENDING'
-			if entry.isAvailable ~= nil and entry.isAvailable() then
-				state = 'PENDING'
-			end
-
-			if entry.isCompleted(entry.quests, turnedInQuest) then
-				state = 'COMPLETED'
-			end
-
-			table.insert(entries, {
-				name = entry.name,
-				state = state,
-			})
-		end
+		local entries = aura_env.processEntries(rawEntries, turnedInQuest)
 
 		if #entries > 0 then
 			table.insert(sections, { name = prof.name, entries = entries })

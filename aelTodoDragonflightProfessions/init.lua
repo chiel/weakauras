@@ -259,3 +259,24 @@ aura_env.knowledgePointCurrencies = {
 	[2034] = true, -- herbalism
 	[2035] = true, -- mining
 }
+
+aura_env.processEntries = function(rawEntries, turnedInQuest)
+	local entries = {}
+	for _, entry in ipairs(rawEntries) do
+		local state = entry.isAvailable ~= nil and 'UNAVAILABLE' or 'PENDING'
+		if entry.isAvailable ~= nil and entry.isAvailable() then
+			state = 'PENDING'
+		end
+
+		if entry.isCompleted(entry.quests, turnedInQuest) then
+			state = 'COMPLETED'
+		end
+
+		table.insert(entries, {
+			name = entry.name,
+			state = state,
+		})
+	end
+
+	return entries
+end
