@@ -38,6 +38,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70531, 70532, 70533 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[164] = { -- blacksmithing
@@ -45,6 +51,12 @@ aura_env.entriesByProfession = {
 			name = 'Treatise',
 			quests = { 74109 },
 			isAvailable = hasSkill(25),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70233, 70235 },
+			isAvailable = hasSkill(50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -56,6 +68,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 72172, 72175 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[202] = { -- engineering
@@ -63,6 +81,12 @@ aura_env.entriesByProfession = {
 			name = 'Treatise',
 			quests = { 74111 },
 			isAvailable = hasSkill(25),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70540, 70557 },
+			isAvailable = hasSkill(50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -74,6 +98,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70613 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[773] = { -- inscription
@@ -81,6 +111,12 @@ aura_env.entriesByProfession = {
 			name = 'Treatise',
 			quests = { 74105 },
 			isAvailable = hasSkill(25),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70558, 70559 },
+			isAvailable = hasSkill(50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -92,6 +128,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70563, 70565 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[165] = { -- leatherworking
@@ -99,6 +141,12 @@ aura_env.entriesByProfession = {
 			name = 'Treatise',
 			quests = { 74113 },
 			isAvailable = hasSkill(25),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70567, 70569, 70571 },
+			isAvailable = hasSkill(50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -110,6 +158,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70617, 70618, 72157 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[393] = { -- skinning
@@ -119,6 +173,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 72159 },
+			isAvailable = hasSkill(50),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[197] = { -- tailoring
@@ -126,6 +186,12 @@ aura_env.entriesByProfession = {
 			name = 'Treatise',
 			quests = { 74115 },
 			isAvailable = hasSkill(25),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Profession Trainer Quest',
+			quests = { 70582, 70586 },
+			isAvailable = hasSkill(50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
