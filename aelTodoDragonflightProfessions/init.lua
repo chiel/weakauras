@@ -24,9 +24,10 @@ function hasCompleted(amount)
 	end
 end
 
-function hasSkill(requiredSkill)
-	return function(currentSkill)
-		return currentSkill >= requiredSkill
+function hasSkill(skillLine, requiredSkill)
+	return function()
+		local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(skillLine)
+		return info.skillLevel > requiredSkill
 	end
 end
 
@@ -35,19 +36,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74108 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(171, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66940, 72427 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(171, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70531, 70532, 70533 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(171, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -56,19 +57,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74109 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(164, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66517, 66897 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(164, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70233, 70235 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(164, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -77,19 +78,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74110 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(333, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66884, 72423 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(333, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 72172, 72175 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(333, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -98,19 +99,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74111 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(202, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66891 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(202, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70540, 70557 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(202, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -119,13 +120,13 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74107 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(182, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70613 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(182, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -134,19 +135,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74105 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(773, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66944 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70558, 70559 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -155,19 +156,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74112 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(755, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66516, 66950 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70563, 70565 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -176,19 +177,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74113 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(165, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 66363, 66364 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(165, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70567, 70569, 70571 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(165, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -197,13 +198,13 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74106 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(186, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70617, 70618, 72157 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(186, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -212,13 +213,13 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74114 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(393, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 72159 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(393, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -227,19 +228,19 @@ aura_env.entriesByProfession = {
 		{
 			name = 'Treatise',
 			quests = { 74115 },
-			isAvailable = hasSkill(25),
+			isAvailable = hasSkill(197, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Faction Trader Quest',
 			quests = { 72410 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(197, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
 			quests = { 70582, 70586 },
-			isAvailable = hasSkill(50),
+			isAvailable = hasSkill(197, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},

@@ -47,7 +47,7 @@ function Trigger(event, ...)
 		local entries = {}
 		for _, entry in ipairs(rawEntries) do
 			local state = entry.isAvailable ~= nil and 'UNAVAILABLE' or 'PENDING'
-			if entry.isAvailable ~= nil and entry.isAvailable(prof.skillLevel) then
+			if entry.isAvailable ~= nil and entry.isAvailable() then
 				state = 'PENDING'
 			end
 
