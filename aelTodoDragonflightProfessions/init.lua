@@ -26,8 +26,7 @@ end
 
 function hasSkill(skillLine, requiredSkill)
 	return function()
-		local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(skillLine)
-		return info.skillLevel > requiredSkill
+		return aura_env.getProfessionSkill(skillLine) > requiredSkill
 	end
 end
 
@@ -259,6 +258,27 @@ aura_env.knowledgePointCurrencies = {
 	[2034] = true, -- herbalism
 	[2035] = true, -- mining
 }
+
+aura_env.getProfessionSkill = function(requestedSkillLine)
+	local info = C_TradeSkillUI.GetProfessionInfoBySkillLineID(requestedSkillLine)
+	if info.skillLevel > 0 then
+		return info.skillLevel
+	end
+
+	local prof1, prof2 = GetProfessions()
+	for _, profIndex in ipairs { prof1, prof2 } do
+		if profIndex == nil then
+			return 0
+		end
+
+		local _, _, skillLevel, _, _, _, skillLine = GetProfessionInfo(profIndex)
+		if skillLine == requestedSkillLine then
+			return skillLevel
+		end
+	end
+
+	return 0
+end
 
 aura_env.processEntries = function(rawEntries, turnedInQuest)
 	local entries = {}
