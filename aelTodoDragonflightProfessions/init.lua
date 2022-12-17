@@ -24,11 +24,27 @@ function hasCompleted(amount)
 	end
 end
 
+function hasReputation(faction, requiredRank)
+	return function()
+		local rankInfo = C_GossipInfo.GetFriendshipReputationRanks(faction)
+		return rankInfo.currentLevel > requiredRank
+	end
+end
+
 function hasSkill(skillLine, requiredSkill)
 	return function()
 		return aura_env.getProfessionSkill(skillLine) > requiredSkill
 	end
 end
+
+aura_env.generalEntries = {
+	{
+		name = 'Show Your Mettle',
+		quests = { 70221 },
+		isAvailable = hasReputation(2544, 2),
+		isCompleted = hasCompleted 'ANY',
+	},
+}
 
 aura_env.entriesByProfession = {
 	[171] = { -- alchemy

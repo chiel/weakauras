@@ -40,6 +40,12 @@ function Trigger(event, ...)
 	table.sort(profNames)
 
 	local sections = {}
+
+	local entries = aura_env.processEntries(aura_env.generalEntries)
+	if #entries > 0 then
+		table.insert(sections, { name = 'Professions', entries = entries })
+	end
+
 	for _, profName in ipairs(profNames) do
 		local prof = profMap[profName]
 		local rawEntries = aura_env.entriesByProfession[prof.skillLine]
