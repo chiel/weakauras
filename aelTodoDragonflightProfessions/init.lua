@@ -87,6 +87,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(164, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70589 },
+			isAvailable = hasSkill(164, 25),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[333] = { -- enchanting
@@ -129,6 +135,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(202, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70591 },
+			isAvailable = hasSkill(202, 25),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[182] = { -- herbalism
@@ -165,6 +177,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70592 },
+			isAvailable = hasSkill(773, 25),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[755] = { -- jewelcrafting
@@ -186,6 +204,12 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70593 },
+			isAvailable = hasSkill(755, 25),
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[165] = { -- leatherworking
@@ -205,6 +229,12 @@ aura_env.entriesByProfession = {
 			name = 'Profession Trainer Quest',
 			quests = { 70567, 70569, 70571 },
 			isAvailable = hasSkill(165, 50),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70594 },
+			isAvailable = hasSkill(165, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
@@ -256,6 +286,12 @@ aura_env.entriesByProfession = {
 			name = 'Profession Trainer Quest',
 			quests = { 70582, 70586 },
 			isAvailable = hasSkill(197, 50),
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Work Orders Quest',
+			quests = { 70595 },
+			isAvailable = hasSkill(197, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
 	},
