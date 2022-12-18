@@ -41,7 +41,7 @@ function Trigger(event, ...)
 
 	local sections = {}
 
-	local entries = aura_env.processEntries(aura_env.generalEntries)
+	local entries = aura_env.processEntries(aura_env.generalEntries, turnedInQuest)
 	if #entries > 0 then
 		table.insert(sections, { name = 'Professions', entries = entries })
 	end
