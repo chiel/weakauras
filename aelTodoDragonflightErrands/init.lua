@@ -35,6 +35,21 @@ aura_env.weeklies = {
 		quests = { 66868, 66874, 66875 },
 		isCompleted = hasCompleted(2),
 	},
+	{
+		name = 'Community Feast',
+		quests = { 70893 },
+		isCompleted = hasCompleted 'ANY',
+	},
+	{
+		name = 'Siege on Dragonbane Keep',
+		quests = { 70866 },
+		isCompleted = hasCompleted 'ANY',
+	},
+	{
+		name = 'World Boss',
+		quests = { 72056 },
+		isCompleted = hasCompleted 'ANY',
+	},
 }
 
 aura_env.dailies = {
