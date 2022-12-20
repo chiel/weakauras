@@ -11,6 +11,11 @@ function Trigger(event, ...)
 		table.insert(sections, { name = 'Weeklies', entries = entries })
 	end
 
+	entries = aura_env.processEntries(aura_env.dailies, turnedInQuest)
+	if #entries > 0 then
+		table.insert(sections, { name = 'Dailies', entries = entries })
+	end
+
 	local plugin = {
 		name = 'Dragonflight Errands',
 		priority = 'HIGH',
