@@ -167,13 +167,13 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66944 },
+			quests = { 66943, 66944 },
 			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
-			quests = { 70558, 70559 },
+			quests = { 70558, 70559, 70560 },
 			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -194,13 +194,13 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66516, 66950 },
+			quests = { 66516, 66950, 72428 },
 			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
 		{
 			name = 'Profession Trainer Quest',
-			quests = { 70563, 70565 },
+			quests = { 70563, 70564, 70565 },
 			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -263,7 +263,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Profession Trainer Quest',
-			quests = { 72159 },
+			quests = { 70620, 72159 },
 			isAvailable = hasSkill(393, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -278,7 +278,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 72410 },
+			quests = { 66952, 72410 },
 			isAvailable = hasSkill(197, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
