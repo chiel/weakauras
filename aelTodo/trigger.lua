@@ -22,6 +22,11 @@ function Trigger(allstates, event, ...)
 		end
 	end
 
+	-- hide all state to avoid weird display issues
+	for key, state in pairs(allstates) do
+		allstates[key] = Mixin(state, { changed = true, show = false })
+	end
+
 	local i = 1
 	for _, key in ipairs(pluginOrder) do
 		local plugin = aura_env.cache[key]
