@@ -27,12 +27,12 @@ end
 aura_env.weeklies = {
 	{
 		name = 'Aiding the Accord',
-		quests = { 70750, 72068, 72373, 72374 },
+		quests = { 70750, 72068, 72373, 72374, 72375 },
 		isCompleted = hasCompleted 'ANY',
 	},
 	{
 		name = 'Dungeon Quests',
-		quests = { 66868, 66874, 66875 },
+		quests = { 66862, 66868, 66871, 66874, 66875 },
 		isCompleted = hasCompleted(2),
 	},
 	{
@@ -47,7 +47,7 @@ aura_env.weeklies = {
 	},
 	{
 		name = 'World Boss',
-		quests = { 72056 },
+		quests = { 72055, 72056 },
 		isCompleted = hasCompleted 'ANY',
 	},
 }
