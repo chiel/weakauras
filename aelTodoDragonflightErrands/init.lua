@@ -41,6 +41,11 @@ aura_env.weeklies = {
 		isCompleted = hasCompleted 'ANY',
 	},
 	{
+		name = 'Grand Hunt',
+		quests = { 70906 },
+		isCompleted = hasCompleted 'ANY',
+	},
+	{
 		name = 'Siege on Dragonbane Keep',
 		quests = { 70866 },
 		isCompleted = hasCompleted 'ANY',
