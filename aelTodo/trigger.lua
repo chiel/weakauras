@@ -65,6 +65,10 @@ function Trigger(allstates, event, ...)
 				if showEntry then
 					local line = WrapTextInColorCode(entry.name, aura_env.stateColors[state])
 
+					if entry.note ~= nil then
+						line = line .. WrapTextInColorCode(' (' .. entry.note .. ')', aura_env.colors.note)
+					end
+
 					showSection = true
 					table.insert(addStates, {
 						key = 'entry_' .. key .. '_' .. section.name .. '_' .. entry.name,
