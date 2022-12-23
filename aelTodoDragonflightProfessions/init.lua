@@ -443,6 +443,7 @@ aura_env.processEntries = function(rawEntries, turnedInQuest)
 
 		table.insert(entries, {
 			name = entry.name,
+			note = entry.note,
 			state = state,
 		})
 	end
