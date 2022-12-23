@@ -117,6 +117,30 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(164, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Draconium Blade Sharpener',
+			note = 'Chests / Scout Packs',
+			quests = { 66382 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Molten Globule',
+			note = 'Fire Enemies',
+			quests = { 70513 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Primeval Earth Fragment',
+			note = 'Earth Enemies',
+			quests = { 70512 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Valdrakken Weapon Chain',
+			note = 'Chests / Scout Packs',
+			quests = { 66381 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[333] = { -- enchanting
