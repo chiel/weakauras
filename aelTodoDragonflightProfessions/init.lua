@@ -261,6 +261,30 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(165, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Exceedingly Soft Skin',
+			note = 'Slyvern / Vorquin',
+			quests = { 70523 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Molted Dragon Scales',
+			note = 'Chests / Scout Packs',
+			quests = { 66384 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Ossified Hide',
+			note = 'Drakes',
+			quests = { 70522 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Preserved Animal Parts',
+			note = 'Chests / Scout Packs',
+			quests = { 66385 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[186] = { -- mining
