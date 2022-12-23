@@ -258,6 +258,31 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(755, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Ancient Gem Fragments',
+			note = 'Chests / Scout Packs',
+			quests = { 66388 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Chipped Tyrstone',
+			note = 'Chests / Scout Packs',
+			quests = { 66389 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Elegantly Engraved Embellishment',
+			note = 'Nokhud / Sundered Flame',
+			quests = { 70521 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Incandescent Curio',
+			note = 'Elementals',
+			-- coords = 'The Waking Shore 75.77 37.00',
+			quests = { 70520 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[165] = { -- leatherworking
