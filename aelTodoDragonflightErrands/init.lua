@@ -57,6 +57,14 @@ aura_env.weeklies = {
 	},
 }
 
+aura_env.biweeklies = {
+	{
+		name = 'Aylaag Camp',
+		quests = { 65784, 65792, 65796, 66711 },
+		isCompleted = hasCompleted(4),
+	},
+}
+
 aura_env.dailies = {
 	{
 		name = 'River Mouth Fishing Hole',
