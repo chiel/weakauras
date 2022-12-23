@@ -66,6 +66,30 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(171, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Decaying Phlegm',
+			note = 'Decayed Enemies',
+			quests = { 70504 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Elementious Splinter',
+			note = 'Elemental Enemies',
+			quests = { 70511 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Experimental Substance',
+			note = 'Chests / Scout Packs',
+			quests = { 66373 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Reawakened Catalyst',
+			note = 'Chests / Scout Packs',
+			quests = { 66374 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[164] = { -- blacksmithing
