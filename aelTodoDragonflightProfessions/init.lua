@@ -447,13 +447,20 @@ aura_env.processEntries = function(rawEntries, turnedInQuest)
 			state = 'PENDING'
 		end
 
-		if entry.isCompleted(entry.quests, turnedInQuest) then
+		local completed, completedCount, totalCount = entry.isCompleted(entry.quests, turnedInQuest)
+		if completed then
 			state = 'COMPLETED'
 		end
 
+		local progress = ''
+		if state ~= 'UNAVAILABLE' and totalCount > 1 then
+			progress = string.format(' (%d/%d)', completedCount, totalCount)
+		end
+
 		table.insert(entries, {
-			name = entry.name,
+			name = entry.name .. progress,
 			note = entry.note,
+			coords = entry.coords,
 			state = state,
 		})
 	end
