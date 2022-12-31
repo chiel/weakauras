@@ -364,6 +364,16 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(393, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Curious Hide Scrap',
+			quests = { 70381, 70383, 70384, 70385, 70386 },
+			isCompleted = hasCompleted 'ALL',
+		},
+		{
+			name = 'Large Sample of Curious Hide',
+			quests = { 70389 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[197] = { -- tailoring
