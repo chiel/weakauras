@@ -14,6 +14,15 @@ function Trigger(event, ...)
 		return
 	end
 
+	-- profession items that are looted will trigger a hidden quest, so we need to
+	-- check if the associated quest is available. Similar to above, there can be a
+	-- delay so we just schedule the re-check
+	if event == 'LOOT_CLOSED' then
+		C_Timer.After(1, function()
+			WeakAuras.ScanEvents 'AEL_TODO_DRAGONFLIGHT_PROFESSIONS_UPDATE'
+		end)
+	end
+
 	local turnedInQuest = nil
 	if event == 'QUEST_TURNED_IN' then
 		turnedInQuest = select(1, ...)
