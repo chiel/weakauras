@@ -32,7 +32,7 @@ aura_env.weeklies = {
 	},
 	{
 		name = 'Dungeon Quests',
-		quests = { 66862, 66868, 66871, 66874, 66875 },
+		quests = { 66862, 66868, 66870, 66871, 66874, 66875 },
 		isCompleted = hasCompleted(2),
 	},
 	{
@@ -60,7 +60,22 @@ aura_env.weeklies = {
 aura_env.biweeklies = {
 	{
 		name = 'Aylaag Camp',
-		quests = { 65784, 65792, 65796, 66711 },
+		quests = {
+			65784,
+			65792,
+			65796,
+			66711,
+
+			65798,
+			67605,
+			70210,
+			70701,
+
+			67034,
+			67039,
+			70279,
+			70990,
+		},
 		isCompleted = hasCompleted(4),
 	},
 }

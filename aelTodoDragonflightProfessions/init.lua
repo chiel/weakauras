@@ -56,7 +56,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66937, 66940, 72427 },
+			quests = { 66937, 66938, 66940, 72427 },
 			isAvailable = hasSkill(171, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
