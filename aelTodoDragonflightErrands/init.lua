@@ -52,7 +52,7 @@ aura_env.weeklies = {
 	},
 	{
 		name = 'World Boss',
-		quests = { 72055, 72056 },
+		quests = { 72054, 72055, 72056, 72057 },
 		isCompleted = hasCompleted 'ANY',
 	},
 }
