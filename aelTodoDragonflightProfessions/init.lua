@@ -434,6 +434,16 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(186, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Iridescent Ore Fragments',
+			quests = { 72160, 72161, 72162, 72163, 72164 },
+			isCompleted = hasCompleted 'ALL',
+		},
+		{
+			name = 'Iridescent Ore',
+			quests = { 72165 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[393] = { -- skinning
