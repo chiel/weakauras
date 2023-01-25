@@ -496,6 +496,31 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(197, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Ohn\'arhan Weave',
+			note = 'Nokhud',
+			coords = 'Ohn\'ahran Plains 83.56 56.13',
+			quests = { 70524 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Primalweave Spindle',
+			note = 'Chests / Scout Packs',
+			quests = { 66387 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Stupidly Effective Stitchery',
+			note = 'Gnolls',
+			quests = { 70525 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Umbral Bone Needle',
+			note = 'Chests / Scout Packs',
+			quests = { 66386 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 }
 
