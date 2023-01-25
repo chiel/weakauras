@@ -254,6 +254,16 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(182, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Dreambloom Petal',
+			quests = { 71857, 71858, 71859, 71860, 71861 },
+			isCompleted = hasCompleted 'ALL',
+		},
+		{
+			name = 'Dreambloom',
+			quests = { 71864 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[773] = { -- inscription
