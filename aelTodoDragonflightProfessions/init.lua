@@ -291,6 +291,31 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(773, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Curious Djaradin Rune',
+			note = 'Djaradin',
+			coords = 'The Waking Shores 28.88 57.90',
+			quests = { 70518 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Draconic Glamour',
+			note = 'Dragonkin',
+			quests = { 70519 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Iskaaran Trading Ledger',
+			note = 'Chests / Scout Packs',
+			quests = { 66376 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Phoenix Feather Quill',
+			note = 'Chests / Scout Packs',
+			quests = { 66375 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[755] = { -- jewelcrafting
