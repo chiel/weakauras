@@ -162,6 +162,32 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(333, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Primal Dust',
+			note = 'Chests / Scout Packs',
+			quests = { 66378 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Primalist Charm',
+			note = 'Humanoid Primalists',
+			coords = 'Thaldraszus 53.19 64.83',
+			quests = { 70515 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Primordial Aether',
+			note = 'Arcane Enemies',
+			coords = 'The Azure Span 40.25 60.62',
+			quests = { 70514 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Prismatic Focusing Shard',
+			note = 'Chests / Scout Packs',
+			quests = { 66377 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[202] = { -- engineering
