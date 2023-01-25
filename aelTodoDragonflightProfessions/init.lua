@@ -215,6 +215,30 @@ aura_env.entriesByProfession = {
 			isAvailable = hasSkill(202, 25),
 			isCompleted = hasCompleted 'ANY',
 		},
+		{
+			name = 'Eroded Titan Gizmo',
+			note = 'Chests / Scout Packs',
+			quests = { 66379 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Infinitely Attachable Pair o\' Docks',
+			note = 'Dragonkin Enemies',
+			quests = { 70517 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Keeper\'s Mark',
+			note = 'Titan / Tyrhold Enemies',
+			quests = { 70516 },
+			isCompleted = hasCompleted 'ANY',
+		},
+		{
+			name = 'Watcher Power Core',
+			note = 'Chests / Scout Packs',
+			quests = { 66380 },
+			isCompleted = hasCompleted 'ANY',
+		},
 	},
 
 	[182] = { -- herbalism
