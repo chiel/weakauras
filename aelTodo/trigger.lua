@@ -64,9 +64,17 @@ function Trigger(allstates, event, ...)
 
 				if showEntry then
 					local line = WrapTextInColorCode(entry.name, aura_env.stateColors[state])
+					local note = entry.note
+					if entry.coords ~= nil then
+						if note ~= nil then
+							note = note .. ' - ' .. entry.coords
+						else
+							note = entry.coords
+						end
+					end
 
-					if entry.note ~= nil then
-						line = line .. WrapTextInColorCode(' (' .. entry.note .. ')', aura_env.colors.note)
+					if note ~= nil then
+						line = line .. WrapTextInColorCode(' (' .. note .. ')', aura_env.colors.note)
 					end
 
 					showSection = true
