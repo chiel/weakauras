@@ -27,13 +27,13 @@ end
 function hasReputation(faction, requiredRank)
 	return function()
 		local rankInfo = C_GossipInfo.GetFriendshipReputationRanks(faction)
-		return rankInfo.currentLevel > requiredRank
+		return rankInfo.currentLevel >= requiredRank
 	end
 end
 
 function hasSkill(skillLine, requiredSkill)
 	return function()
-		return aura_env.getProfessionSkill(skillLine) > requiredSkill
+		return aura_env.getProfessionSkill(skillLine) >= requiredSkill
 	end
 end
 
