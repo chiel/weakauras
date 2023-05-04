@@ -56,7 +56,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66937, 66938, 66940, 72427 },
+			quests = { 66937, 66938, 66940, 72427, 75363 },
 			isAvailable = hasSkill(171, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -101,7 +101,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66517, 66897, 66941 },
+			quests = { 66517, 66897, 66941, 75569 },
 			isAvailable = hasSkill(164, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -152,7 +152,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66884, 66900, 66935, 72423 },
+			quests = { 66884, 66900, 66935, 72423, 75865 },
 			isAvailable = hasSkill(333, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -199,7 +199,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66890, 66891, 66942, 72396 },
+			quests = { 66890, 66891, 66942, 72396, 75575 },
 			isAvailable = hasSkill(202, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -275,7 +275,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66943, 66944, 66945, 72438 },
+			quests = { 66943, 66944, 66945, 72438, 75573 },
 			isAvailable = hasSkill(773, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -327,7 +327,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66516, 66949, 66950, 72428 },
+			quests = { 66516, 66949, 66950, 72428, 75362 },
 			isAvailable = hasSkill(755, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -379,7 +379,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66363, 66364, 66951, 72407 },
+			quests = { 66363, 66364, 66951, 72407, 75354 },
 			isAvailable = hasSkill(165, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
@@ -480,7 +480,7 @@ aura_env.entriesByProfession = {
 		},
 		{
 			name = 'Faction Trader Quest',
-			quests = { 66952, 66953, 72410 },
+			quests = { 66952, 66953, 72410, 75407 },
 			isAvailable = hasSkill(197, 50),
 			isCompleted = hasCompleted 'ANY',
 		},
