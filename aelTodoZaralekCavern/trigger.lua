@@ -1,6 +1,8 @@
 -- PLAYER_ENTERING_WORLD, PLAYER_TARGET_CHANGED, STATUS
 
 function Trigger(event, ...)
+	aura_env.init()
+
 	local turnedInQuest = nil
 	if event == 'QUEST_TURNED_IN' then
 		turnedInQuest = select(1, ...)
