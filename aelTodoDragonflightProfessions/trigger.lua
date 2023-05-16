@@ -1,4 +1,8 @@
+-- CURRENCY_DISPLAY_UPDATE, LOOT_CLOSED, PLAYER_ENTERING_WORLD, QUEST_TURNED_IN, STATUS, AEL_TODO_DRAGONFLIGHT_PROFESSIONS_UPDATE
+
 function Trigger(event, ...)
+	aura_env.init()
+
 	-- knowledge points are treated as currencies, there is no `QUEST_TURNED_IN` event
 	-- associated with using a treatise, nor is the hidden quest immediately marked as
 	-- completed by `IsQuestFlaggedCompleted`, so instead I set a timer for 1 second
@@ -50,7 +54,7 @@ function Trigger(event, ...)
 
 	local sections = {}
 
-	local entries = aura_env.processEntries(aura_env.generalEntries, turnedInQuest)
+	local entries = AelTodoProcessEntries(aura_env.generalEntries, turnedInQuest)
 	if #entries > 0 then
 		table.insert(sections, { name = 'Professions', entries = entries })
 	end
@@ -58,7 +62,7 @@ function Trigger(event, ...)
 	for _, profName in ipairs(profNames) do
 		local prof = profMap[profName]
 		local rawEntries = aura_env.entriesByProfession[prof.skillLine]
-		local entries = aura_env.processEntries(rawEntries, turnedInQuest)
+		local entries = AelTodoProcessEntries(rawEntries, turnedInQuest)
 
 		if #entries > 0 then
 			table.insert(sections, { name = prof.name, entries = entries })
