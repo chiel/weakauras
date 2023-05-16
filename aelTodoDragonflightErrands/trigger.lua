@@ -1,4 +1,8 @@
+-- PLAYER_ENTERING_WORLD, QUEST_TURNED_IN, STATUS, PLAYER_TARGET_CHANGED
+
 function Trigger(event, ...)
+	aura_env.init()
+
 	local turnedInQuest = nil
 	if event == 'QUEST_TURNED_IN' then
 		turnedInQuest = select(1, ...)
@@ -6,19 +10,14 @@ function Trigger(event, ...)
 
 	local sections = {}
 
-	local entries = aura_env.processEntries(aura_env.weeklies, turnedInQuest)
+	local entries = AelTodoProcessEntries(aura_env.weeklies, turnedInQuest)
 	if #entries > 0 then
 		table.insert(sections, { name = 'Weeklies', entries = entries })
 	end
 
-	entries = aura_env.processEntries(aura_env.biweeklies, turnedInQuest)
+	entries = AelTodoProcessEntries(aura_env.biweeklies, turnedInQuest)
 	if #entries > 0 then
 		table.insert(sections, { name = 'Bi-weeklies', entries = entries })
-	end
-
-	entries = aura_env.processEntries(aura_env.dailies, turnedInQuest)
-	if #entries > 0 then
-		table.insert(sections, { name = 'Dailies', entries = entries })
 	end
 
 	local plugin = {
