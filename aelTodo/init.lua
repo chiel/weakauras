@@ -42,7 +42,7 @@ function AelTodoHasCompleted(amount)
 	end
 end
 
-local defaultIsCompleted = hasCompleted 'ANY'
+local defaultIsCompleted = AelTodoHasCompleted 'ANY'
 
 function AelTodoProcessEntries(rawEntries, turnedInQuest)
 	local entries = {}
