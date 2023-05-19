@@ -136,7 +136,7 @@ aura_env.init = function()
 			},
 			{
 				name = 'Profession Trainer Quest',
-				quests = { 72172, 72173, 72175 },
+				quests = { 72155, 72172, 72173, 72175 },
 				isAvailable = hasSkill(333, 50),
 			},
 			{
